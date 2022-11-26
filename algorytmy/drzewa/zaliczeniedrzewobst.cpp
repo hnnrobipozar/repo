@@ -36,9 +36,9 @@ class tree{
         else{
             node *temp = root;
             while(temp != NULL){
-                    if(){
+                   // if(){
 
-                    }
+                    //}
                 // if(word < temp->word){
                 //     if(temp->left == NULL){
                 //         temp->left = n;
