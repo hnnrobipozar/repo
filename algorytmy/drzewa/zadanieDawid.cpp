@@ -161,7 +161,7 @@ int main() {
 
 	//dodawanie slow
 	slownik.add_node(klucz, "CDE");
-	slownik.add_node(klucz, "ABCDF");
+	slownik.add_node(klucz, "ABC");
 	
 	slownik.add_node(klucz, "EFG"); 
 	slownik.add_node(klucz, "BCD");
@@ -171,7 +171,7 @@ int main() {
 	slownik.add_node(klucz, "212");
 	slownik.add_node(klucz, "3UI");
 
-	slownik.print_inorder();
+	//slownik.print_inorder();
 	cout << endl;
 
 	//wyszukiwanie slowa w slowniku
