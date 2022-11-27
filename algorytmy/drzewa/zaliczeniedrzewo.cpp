@@ -71,11 +71,11 @@ class tree{
                 printPreOrder(temp->right);
             }
         }
-        void printInOrder(node *temp){
+        void printInAlphOrder(node *temp){
             if(temp != NULL){
-                printInOrder(temp->left);
+                printInAlphOrder(temp->left);
                 cout << temp->data << " ";
-                printInOrder(temp->right);
+                printInAlphOrder(temp->right);
             }
         }
         void printPostOrder(node *temp){
@@ -90,7 +90,7 @@ class tree{
             printPreOrder(root);
         }
         void printInOrder(){
-            printInOrder(root);
+            printInAlphOrder(root);
         }
         void printPostOrder(){
             printPostOrder(root);
@@ -98,7 +98,7 @@ class tree{
         void printTree(){
             printPreOrder(root);
             cout << endl;
-            printInOrder(root);
+            printInAlphOrder(root);
             cout << endl;
             printPostOrder(root);
             cout << endl;
