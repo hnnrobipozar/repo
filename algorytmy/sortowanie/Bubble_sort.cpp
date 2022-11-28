@@ -36,7 +36,7 @@ void printArray(int arr[], int size)
 // Driver program to test above functions
 int main()
 {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int arr[] = {7,2,6,124,656,343,651,215,738,275};
     int N = sizeof(arr)/sizeof(arr[0]);
     bubbleSort(arr, N);
     cout <<"Sorted array: \n";
