@@ -1,0 +1,12 @@
+1. Sortowanie częsciowo posorotwanych tablic. Na wejście programu jest podawana tablica liczb, pierwsza część
+której jest posortowana rosnąco (do pewnego nieznanego elementu), a druga – malejąco. Zaimplementuj algorytm sortujący
+tablicę. Zadanie będzie oceniane w zależności od optymalności rozwiązania
+
+2. Problem rozdania czekoladek: Na wejście do programu jest podana tablica liczb całkowitych reprezentująca paczki
+z czekoladkami ( każda paczka może zawierać dowolną liczbe cukierek) oraz liczba dzieci dla których trzeba wybrac
+po 1 paczce tak, aby różnica między największą a najmniejszą liczbą czekoladek w wybranych paczkach była minimalna.
+Zadanie będzie oceniane w zależności od optymalności rozwiązania
+
+3. Problem maksymalnego iloczynu: Napisz program który dla tablicy liczb całkowitych znajdzie parę liczb iloczyn której
+będzie maksymalny. Zadanie będzie oceniane w zależności od optymalności rozwiązania
+

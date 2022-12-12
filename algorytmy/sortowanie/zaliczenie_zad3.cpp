@@ -1,7 +1,7 @@
 #include <iostream>
+
 using namespace std;
-  
-// A utility function to swap two elements
+
 void swap(int* a, int* b)
 {
     int t = *a;
@@ -17,9 +17,7 @@ of pivot */
 int partition(int arr[], int low, int high)
 {
     int pivot = arr[high]; // pivot
-    int i
-        = (low
-           - 1); // Index of smaller element and indicates
+    int i = (low - 1); // Index of smaller element and indicates
                  // the right position of pivot found so far
   
     for (int j = low; j <= high - 1; j++) {
@@ -59,14 +57,28 @@ void printArray(int arr[], int size)
         cout << arr[i] << " ";
     cout << endl;
 }
-  
-// Driver Code
-int main()
-{
-    int arr[] = { 10, 7, 8, -9, 1, 5 };
-    int n = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, 0, n - 1);
-    cout << "Sorted array: \n";
-    printArray(arr, n);
+
+int najwiekszyIloczynTablicy(int tab[]){
+    int n = sizeof(tab) / sizeof(tab[0]);
+    quickSort(tab, 0, n - 1);
+    printArray(tab, n);
+    int iloczyn1 = tab[n-1] * tab[n-2];
+    int iloczyn2 = tab[0] * tab[1];
+    int iloczyn = iloczyn1 > iloczyn2 ? iloczyn1 : iloczyn2;
+    return iloczyn;
+}
+
+
+int main(){
+
+   int t[]={7,2,33,9,-99,-1,4};
+   int N = sizeof(t) / sizeof(t[0]);
+    quickSort(t, 0, N - 1);
+    printArray(t, N);
+
+    //cout << najwiekszyIloczynTablicy(tab);
+
+   
     return 0;
+    
 }
