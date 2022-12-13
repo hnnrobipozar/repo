@@ -58,12 +58,12 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
-int najwiekszyIloczynTablicy(int tab[]){
-    int n = sizeof(tab) / sizeof(tab[0]);
-    quickSort(tab, 0, n - 1);
-    printArray(tab, n);
-    int iloczyn1 = tab[n-1] * tab[n-2];
-    int iloczyn2 = tab[0] * tab[1];
+int najwiekszyIloczynTablicy(int *tab, int size){
+ 
+    quickSort(tab, 0, size - 1);
+    printArray(tab, size);
+    int iloczyn1 = (tab[size-1] * tab[size-2]);
+    int iloczyn2 = (tab[0] * tab[1]);
     int iloczyn = iloczyn1 > iloczyn2 ? iloczyn1 : iloczyn2;
     return iloczyn;
 }
@@ -71,12 +71,12 @@ int najwiekszyIloczynTablicy(int tab[]){
 
 int main(){
 
-   int t[]={7,2,33,9,-99,-1,4};
+   int t[]={7,2,33,9,-99,-1,4,-111};
+   int *wsk_t=t;
    int N = sizeof(t) / sizeof(t[0]);
-    quickSort(t, 0, N - 1);
-    printArray(t, N);
 
-    //cout << najwiekszyIloczynTablicy(tab);
+
+    cout << najwiekszyIloczynTablicy(wsk_t,N);
 
    
     return 0;
