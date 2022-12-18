@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -63,8 +64,6 @@ void mergeSort(int arr[], int l, int r) {
 
     mergeSort(arr, l, m);
     mergeSort(arr, m + 1, r);
-
-    
     merge(arr, l, m, r);
     
   }
@@ -94,8 +93,7 @@ int partition(int arr[], int low, int high){
     int pivot = arr[high]; 
     int i = (low - 1); 
   
-    for (int j = low; j <= high - 1; j++) {
-        
+    for (int j = low; j <= high - 1; j++) { 
         if (arr[j] < pivot) {
             i++; 
             swap(&arr[i], &arr[j]);
@@ -134,10 +132,24 @@ void greatestMulti(int *tab, int size){
 }
 
 int main(){
+  srand(time(NULL));
 //ad1
     cout<<endl<<"Zadanie 1:"<<endl;
-    int arr1[] = {1, 3, 5, 7, 9, 11, 10, 8, 6, 4, 2};
+    //int arr1[] = {1, 3, 5, 7, 9, 11, 10, 8, 6, 4, 2};
+    int i=0;
+    int arr1[10];
     int N1 = sizeof(arr1)/sizeof(arr1[0]);
+
+    if(i==0){
+        arr1[i] = rand() % 100;
+    }
+    for(i = 1; i < (N1/2); i++){
+        arr1[i] = arr1[i-1]+rand() % 100;
+    }
+    for(i = (N1/2); i < N1; i++){
+        arr1[i] = arr1[i-1]-rand() % 100;
+    }
+    
     sortArr(arr1, 0, N1);
     cout<<"**************************************"<<endl;
 
@@ -149,7 +161,11 @@ int main(){
 
 //ad3
     cout<<endl<<"Zadanie 3:"<<endl;
-    int arr3[]={7,2,33,9,-99,-1,4,-111};
+    //int arr3[]={7,2,33,9,-99,-1,4,-111,112,0};
+    int arr3[10];
+    for(i = 0; i < 10; i++){
+        arr3[i] = rand() % 200 - 100;
+    }
     int N3 = sizeof(arr3) / sizeof(arr3[0]);
     greatestMulti(arr3,N3);
     cout<<"**************************************"<<endl;
